@@ -618,7 +618,7 @@ class Image2Seg:
         segmentation = Image.fromarray(color_seg)
         updated_image_path = get_new_image_name(inputs, func_name="segmentation")
         segmentation.save(updated_image_path)
-        print(f"\nProcessed Image2Pose, Input Image: {inputs}, Output Pose: {updated_image_path}")
+        print(f"\nProcessed Image2Seg, Input Image: {inputs}, Output Seg: {updated_image_path}")
         return updated_image_path
 
 
@@ -748,7 +748,7 @@ class Image2Normal:
         image = image.resize(original_size)
         updated_image_path = get_new_image_name(inputs, func_name="normal-map")
         image.save(updated_image_path)
-        print(f"\nProcessed Image2Normal, Input Image: {inputs}, Output Depth: {updated_image_path}")
+        print(f"\nProcessed Image2Normal, Input Image: {inputs}, Output Normal: {updated_image_path}")
         return updated_image_path
 
 
